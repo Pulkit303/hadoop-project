@@ -1,0 +1,5 @@
+---
+ - hosts: hadoopv2
+   tasks:
+    - name: Starting namenode only
+      shell: '/hadoop2/sbin/hadoop-daemon.sh start namenode'

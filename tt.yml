@@ -1,0 +1,10 @@
+---
+ - hosts: hadoopv1
+   tasks:
+    - name: Starting namenode with jobtracker
+      shell: '/etc/hadoop/sbin/hadoop-daemon.sh start namenode /etc/hadoop/sbin/hadoop-daemon.sh start jobtracker'
+ - hosts: tasktracker
+   tasks:
+    - name: Starting datanode with tasktracker
+      shell: '/etc/hadoop/sbin/hadoop-daemon.sh start datanode /etc/hadoop/sbin/hadoop-daemon.sh start tasktracker'
+

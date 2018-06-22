@@ -1,0 +1,14 @@
+---
+ - hosts: hadoopv2
+   tasks:
+    - name: starting namenode
+      shell: '/hadoop2/sbin/hadoop-daemon.sh start namenode'
+    - name: starting resource manager
+      shell: '/hadoop2/sbin/yarn-daemon.sh start resourcemanager'
+ - hosts: datanode
+   tasks:
+    - name: Starting datanode
+      shell: '/hadoop2/sbin/hadoop-daemon.sh start datanode'
+    - name: Starting node manager
+      shell: '/hadoop2/sbin/yarn-daemon.sh start nodemanager'
+

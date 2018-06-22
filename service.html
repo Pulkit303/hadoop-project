@@ -1,0 +1,26 @@
+<html>
+<body>
+
+<h2>HAdoop services</h2>
+
+<form action="/cgi-bin/service.py" method="POST">
+<input type="radio" name="h1" value="hv1" required> <p> Hadoop v1 </p><br/>
+<select name="dropdown1">
+<option value="nn" selected>namenode</option>
+<option value="dn">datanode with namenode</option>
+<option value="jt">namenode with jobtracker and datanode with tasktracker</option>
+		<input type="submit" value="Start"><br/><br/>
+
+<form action="/cgi-bin/service.py" method="POST">
+<input type="radio" name="h1" value="hv2" required> <p> Hadoop v2 </p><br/> 
+<select name="dropdown2">
+<option value="nn2" selected>namenode</option>
+<option value="dn1">one datanode with namenode</option>
+<option value="dn2">two datanode with namenode</option>
+<option value="dn3">three datanode with namenode</option>
+<option value="dnr">namenode with resource manager and datanode with node manager</option>
+		<input type="submit" value="Start">
+
+
+</body>
+</html>
